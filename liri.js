@@ -5,111 +5,116 @@ require("dotenv").config();
 var keys = require("./keys.js");
 var request = require("request");
 var fs = require ("fs");
-var spotify = require("node-spotify-api");
+var Spotify = require("node-spotify-api");
 var axios = require("axios");
+
+var spotify = new Spotify(keys.spotify);
 
 
 // stored arguments/ input array
-var userInput = process.argv;
-var userAction = userInput[2];
+var userInput = process.argv[2];
+var userAction = process.argv[3];
+runApp();
 
-// variable to store movie, song, or concert
-var input = "";
 
-//for loop attaching multiple word arguments
-for (var i = 3; i < userInput.length; i++) {
 
-    if (i > 3 && i <userInput.length) {
 
-        input = input + "+" + userInput[i];
-
-    } else {
-
-        input += userInput[i];
-    }
-}
-
+function runApp() {
 // switch case
-switch (userAction) {
+switch (userInput) {
     case "concert-this":
-    concertThis();
-    break;
+        concertThis();
+        break;
 
     case "spotify-this-song":
-    if (input){
-        spotifyThis(input);
-    } else {
-    //     spotifyThis("")
-    }
-    break;
+        spotifyThis();
+        break;
 
     case "movie-this":
-    if (input){
-        movieThis(input);
-    } else {
-        movieThis("Mr. Nobody")
-    }
-    break;
+        // movieThis(userAction);
+        movieThis();
+        break;
 
     case "do-what-it-says":
-    doThisThing();
-    break;
-
-    default:
-        console.log("{Please enter: concert-this, spotify-this-song, movie-this, or do-what-it-says}");
-    break;
+        doThisThing();
+        break;
+   }
 }
 
 
+// var concertThis = function () {
 
-var concertThis = function () {
-
-}
-
-var spotifyThis = function () {
-
-}
-
-var movieThis = function (movieName) {
-
-    var queryURL = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
-
-
-// Requesting through axios then logging title, year, rating, rotten tomatoes rating, country, language, plot, actors to terminal.  
-    request(queryURL, function (error, response, body) {
-        
-
-    // if (movieName === "") {
-
-    //     movieName = 'Mr. Nobody';
-    // }
-
-  
-
-    // if (movieName === "") {
-
-    //     movieName = 'Mr. Nobody';
-    // }
-
-        console.log("Title of the movie: " + JSON.parse(body).Title);
-        console.log("Release year: " + JSON.parse(body).Year);
-        console.log("Movie rating: " + JSON.parse(body).imdbRating);
-        // console.log("Rotten Tomatoes rating: " + JSON.parse(body).Ratings[1].Value);
-        console.log("Country of origin: " + JSON.parse(body).Country);
-        console.log("Language: " + JSON.parse(body).Language);
-        console.log("Movie plot: " + JSON.parse(body).Plot);
-        console.log("Actors: " + JSON.parse(body).Actors);
-
-    }
-)
-};
-
-
-
-// var spotify = new Spotify(keys.spotifyKeys);
-
-// fs.readFile("random.txt","utf8", function(err,data) {
-//     if (err) {
-//         return console.log(err);
-//     }
 // }
+
+
+function spotifyThis() {
+    if (!userAction) {
+    
+        userAction = "the sign by ace of base"
+    }
+    
+        spotify.search({ type: 'track', query: userAction }, function (err, data) {
+            if (err) {
+                return console.log('Error occurred: ' + err);
+            }
+    
+            // need to code is no song default to ace of base
+            var data = data.tracks.items[0];
+            console.log(data.artists[0].name);
+            console.log(data.name);
+            console.log(data.preview_url);
+            console.log(data.album.name);
+            
+
+        });
+    }
+
+function movieThis() {
+
+    var input = "";
+
+    for (var i = 2; i < userInput.length; i++) {
+        if ( i > 2 && i < userInput.length){
+            input = input + "+" + userInput[i];
+        } else {
+            input += userInput[i];
+        }
+    }
+        if (userAction === undefined){
+
+            userAction = 'Mr. Nobody';
+
+            }
+
+        var queryURL = "http://www.omdbapi.com/?t=" + userAction + "&y=&plot=short&apikey=trilogy";
+        
+        request(queryURL, function(error, response, body) {
+
+      
+        if (!error && response.statusCode === 200) {
+    
+                console.log("Title: " + JSON.parse(body).Title);
+                console.log("Release Year: " + JSON.parse(body).Year);
+                console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
+                console.log("Rotten Tomatoes Rating: " + JSON.parse(body).tomatoRating);
+                console.log("Country: " + JSON.parse(body).Country);
+                console.log("Language: " + JSON.parse(body).Language);
+                console.log("Plot: " + JSON.parse(body).Plot);
+                console.log("Actors: " + JSON.parse(body).Actors);
+            };
+        });
+    };
+    
+    function doThisThing() {
+
+        fs.readFile("random.txt", "utf8", function(error, data){
+            if(error){
+               return  console.log(error)
+            }
+        data = data.split(",");
+        action = data[0];
+        userChoice = data[1];
+    
+        runApp();
+        });
+    }
