@@ -46,4 +46,18 @@
 
 ![Concert this example](/images/concert-this.png)
 
+![Spotify this example](/images/spotify-this-song.png)
+
+![Movie this example](/images/movie-this.png)
+
+![Movie this example2](/images/movie-this-blank.png)
+
+![Do What It Says example](/images/do-what-it-says.png)
+
+![Log.txt](/images/logtxt.png)
+
+
+
+
+
 
