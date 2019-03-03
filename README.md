@@ -6,7 +6,7 @@
 
 #### The command lines below can be accepted by LIRI:
 
-* concert-this <artist/band name here>
-* spotify-this-song <song name here>
-* movie-this <movie title here>
+* concert-this <"artist/band name here">
+* spotify-this-song <"song name here">
+* movie-this <"movie title here">
 * do-what-it-says
