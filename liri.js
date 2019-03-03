@@ -52,10 +52,28 @@ switch (userInput) {
 
             // sets result variable, if everything in search goes right, console logs venue name, location, and date of concert using moment.js
             var result = JSON.parse(body)[0];
+
             if (!error && response.statusCode === 200) {
-                console.log("Venue Name: " + result.venue.name + "\nVenue Location: " + result.venue.city +  "\nDate: " + moment(result.dateTime).format("MM/DD/YYYY"));
+                // console.log("-----------------------------" + "\nVenue Name: " + result.venue.name + "\nVenue Location: " + result.venue.city +  "\nDate: " + moment(result.dateTime).format("MM/DD/YYYY"));
+                var text = "-----------------------------" + "\nVenue Name: " + result.venue.name + "\nVenue Location: " + result.venue.city +  "\nDate: " + moment(result.dateTime).format("MM/DD/YYYY") + "\n-----------------------------";
+                
+                console.log(text);
+
+                fs.appendFile("log.txt", text, function (error) {
+
+                    if (error) {
+        
+                        console.log(error);
+                      }
+        
+                      else {
+                        console.log("Content Added!");
+                      }
+        
+                });
               
-                };
+              
+            };
 
         });
 
@@ -72,14 +90,34 @@ function spotifyThis() {
     
         // spotify searches the song name the user enters, if there is an erorr returns the erro
         spotify.search({ type: 'track', query: userAction }, function (err, data) {
+
             if (err) {
+
                 return console.log('Error occurred: ' + err);
+
             }
     
             // sets data variable, console los the artist name, song title, preview url, and album name
             var data = data.tracks.items[0];
-            console.log("Artist: " + data.artists[0].name + "\nSong: " + data.name +
-            "\nPreview URL: " + data.preview_url + "\nAlbum: " + data.album.name);
+          
+            // adds text to log.text file
+            var text = "-----------------------------" + "\nArtist: " + data.artists[0].name + "\nSong: " + data.name + "\nPreview URL: " + data.preview_url + "\nAlbum: " + data.album.name + "\n-----------------------------";
+            
+        
+            console.log(text);
+            
+            fs.appendFile("log.txt", text, function (error) {
+    
+                if (error) {
+    
+                    console.log(error);
+                  }
+    
+                  else {
+                    console.log("Content Added!");
+                  }
+    
+            });
           
         });
     }
@@ -92,6 +130,8 @@ function movieThis() {
 
         userAction = 'Mr. Nobody';
 
+        console.log("-----------------------------" + "\nIf you haven't watched Mr. Nobody, then you should: http://www.imdb.com/title/tt0485947/" + "\nIt's on Netflix!");
+
     }
 
         var queryURL = "http://www.omdbapi.com/?t=" + userAction + "&y=&plot=short&apikey=trilogy";
@@ -100,8 +140,23 @@ function movieThis() {
 
     // if search is correct, console logs title, release year, IMDB rating, rotten tomatoes rating, country, language, plot, actors
     if (!error && response.statusCode === 200) {
-    
-        console.log("Title: " + JSON.parse(body).Title + "\nRelease Year: " + JSON.parse(body).Year + "\nIMDB Rating: " + JSON.parse(body).imdbRating + "\nRotten Tomatoes Rating: " + JSON.parse(body).tomatoRating + "\nCountry: " + JSON.parse(body).Country + "\nLanguage: " + JSON.parse(body).Language + "\nPlot: " + JSON.parse(body).Plot + "\nActors: " + JSON.parse(body).Actors);
+        
+        var text = "-----------------------------" + "\nTitle: " + JSON.parse(body).Title + "\nRelease Year: " + JSON.parse(body).Year + "\nIMDB Rating: " + JSON.parse(body).imdbRating + "\nRotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value + "\nCountry: " + JSON.parse(body).Country + "\nLanguage: " + JSON.parse(body).Language + "\nPlot: " + JSON.parse(body).Plot + "\nActors: " + JSON.parse(body).Actors + "\n-----------------------------";
+
+        console.log(text);
+        
+        fs.appendFile("log.txt", text, function (error) {
+
+            if (error) {
+
+                console.log(error);
+              }
+
+              else {
+                console.log("Content Added!");
+              }
+
+        });
                
             };
         });
