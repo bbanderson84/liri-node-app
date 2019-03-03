@@ -101,7 +101,7 @@ function spotifyThis() {
             var data = data.tracks.items[0];
           
             // adds text to log.text file
-            var text = "-----------------------------" + "\nArtist: " + data.artists[0].name + "\nSong: " + data.name + "\nPreview URL: " + data.preview_url + "\nAlbum: " + data.album.name + "\n-----------------------------";
+            var text = "-----------------------------" + "\nArtist: " + data.artists[0].name + "\nSong: " + data.name + "\nPreview URL: " + data.preview_url + "\nAlbum: " + data.album.name + "-----------------------------";
             
         
             console.log(text);
@@ -141,7 +141,7 @@ function movieThis() {
     // if search is correct, console logs title, release year, IMDB rating, rotten tomatoes rating, country, language, plot, actors
     if (!error && response.statusCode === 200) {
         
-        var text = "-----------------------------" + "\nTitle: " + JSON.parse(body).Title + "\nRelease Year: " + JSON.parse(body).Year + "\nIMDB Rating: " + JSON.parse(body).imdbRating + "\nRotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value + "\nCountry: " + JSON.parse(body).Country + "\nLanguage: " + JSON.parse(body).Language + "\nPlot: " + JSON.parse(body).Plot + "\nActors: " + JSON.parse(body).Actors + "\n-----------------------------";
+        var text = "-----------------------------" + "\nTitle: " + JSON.parse(body).Title + "\nRelease Year: " + JSON.parse(body).Year + "\nIMDB Rating: " + JSON.parse(body).imdbRating + "\nRotten Tomatoes Rating: " + JSON.parse(body).tomatoRating + "\nCountry: " + JSON.parse(body).Country + "\nLanguage: " + JSON.parse(body).Language + "\nPlot: " + JSON.parse(body).Plot + "\nActors: " + JSON.parse(body).Actors;
 
         console.log(text);
         

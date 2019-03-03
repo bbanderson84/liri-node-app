@@ -33,4 +33,99 @@ Date: 03/03/2019-----------------------------
 Venue Name: SUNDARA
 Venue Location: Playa Del Carmen
 Date: 03/03/2019
------------------------------
+----------------------------------------------------------
+Venue Name: SUNDARA
+Venue Location: Playa Del Carmen
+Date: 03/03/2019
+----------------------------------------------------------
+Artist: Minus the Bear
+Song: Pachuca Sunrise
+Preview URL: https://p.scdn.co/mp3-preview/d68d463bf7381efac46bef0e5d78edcee69a3499?cid=4eee760e18094396921512fde32f9850
+Album: Menos El Oso
+----------------------------------------------------------
+Artist: Karaoke Box
+Song: I Saw the Sign (Karaoke Playback with Lead Vocals) [Made Famous by Ace of Base]
+Preview URL: https://p.scdn.co/mp3-preview/56ce61443e2a6475875fb9c5ab0bacf46a2e217f?cid=4eee760e18094396921512fde32f9850
+Album: Karaoke Box: Reggae Greatest Hits
+----------------------------------------------------------
+Title: undefined
+Release Year: undefined
+IMDB Rating: undefined
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: undefined
+Plot: undefined
+Actors: undefined
+----------------------------------------------------------
+Title: undefined
+Release Year: undefined
+IMDB Rating: undefined
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: undefined
+Plot: undefined
+Actors: undefined-----------------------------
+Title: undefined
+Release Year: undefined
+IMDB Rating: undefined
+Rotten Tomatoes Rating: undefined
+Country: undefined
+Language: undefined
+Plot: undefined
+Actors: undefined-----------------------------
+Artist: Alkaline Trio
+Song: Sun Dials
+Preview URL: https://p.scdn.co/mp3-preview/c57b30fc2a8eb7c0d39d12355ae8e8f6e8c8f163?cid=4eee760e18094396921512fde32f9850
+Album: The Alkaline Trio----------------------------------------------------------
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham-----------------------------
+Title: Jurassic Park
+Release Year: 1993
+IMDB Rating: 8.1
+Rotten Tomatoes Rating: undefined
+Country: USA
+Language: English, Spanish
+Plot: During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.
+Actors: Sam Neill, Laura Dern, Jeff Goldblum, Richard Attenborough-----------------------------
+Title: Big
+Release Year: 1988
+IMDB Rating: 7.3
+Rotten Tomatoes Rating: undefined
+Country: USA
+Language: English
+Plot: After wishing to be made big, a teenage boy wakes the next morning to find himself mysteriously in the body of an adult.
+Actors: Tom Hanks, Elizabeth Perkins, Robert Loggia, John Heard-----------------------------
+Venue Name: SUNDARA
+Venue Location: Playa Del Carmen
+Date: 03/03/2019
+----------------------------------------------------------
+Artist: Minus the Bear
+Song: Pachuca Sunrise
+Preview URL: https://p.scdn.co/mp3-preview/d68d463bf7381efac46bef0e5d78edcee69a3499?cid=4eee760e18094396921512fde32f9850
+Album: Menos El Oso----------------------------------------------------------
+Artist: Karaoke Box
+Song: I Saw the Sign (Karaoke Playback with Lead Vocals) [Made Famous by Ace of Base]
+Preview URL: https://p.scdn.co/mp3-preview/56ce61443e2a6475875fb9c5ab0bacf46a2e217f?cid=4eee760e18094396921512fde32f9850
+Album: Karaoke Box: Reggae Greatest Hits----------------------------------------------------------
+Title: Jurassic Park
+Release Year: 1993
+IMDB Rating: 8.1
+Rotten Tomatoes Rating: undefined
+Country: USA
+Language: English, Spanish
+Plot: During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.
+Actors: Sam Neill, Laura Dern, Jeff Goldblum, Richard Attenborough-----------------------------
+Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.8
+Rotten Tomatoes Rating: undefined
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
