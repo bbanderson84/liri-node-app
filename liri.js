@@ -89,11 +89,11 @@ function spotifyThis() {
     }
     
         // spotify searches the song name the user enters, if there is an erorr returns the erro
-        spotify.search({ type: 'track', query: userAction }, function (err, data) {
+        spotify.search({ type: 'track', query: userAction }, function (error, data) {
 
-            if (err) {
+            if (error) {
 
-                return console.log('Error occurred: ' + err);
+                 console.log('Error occurred: ' + error);
 
             }
     
@@ -144,6 +144,8 @@ function movieThis() {
         var text = "-----------------------------" + "\nTitle: " + JSON.parse(body).Title + "\nRelease Year: " + JSON.parse(body).Year + "\nIMDB Rating: " + JSON.parse(body).imdbRating + "\nRotten Tomatoes Rating: " + JSON.parse(body).tomatoRating + "\nCountry: " + JSON.parse(body).Country + "\nLanguage: " + JSON.parse(body).Language + "\nPlot: " + JSON.parse(body).Plot + "\nActors: " + JSON.parse(body).Actors;
 
         console.log(text);
+
+        
         
         fs.appendFile("log.txt", text, function (error) {
 
@@ -159,6 +161,8 @@ function movieThis() {
         });
                
             };
+
+
         });
     };
 
@@ -167,13 +171,20 @@ function doThisThing() {
 
         // reads the information located in "random.txt", console logs error if there is one
         fs.readFile("random.txt", "utf8", function(error, data){
+
             if(error){
+
                return  console.log(error)
+
             }
+            
         data = data.split(",");
+
         userInput = data[0];
+
         userAction = data[1];
     
         runApp();
+
         });
     }

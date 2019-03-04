@@ -44,20 +44,28 @@
 
 ##### A log of all of the data retrieved in these searches will also be printed to "log.txt
 
+
+#### concert-this example
 ![Concert this example](/images/concert-this.png)
 
+#### spotify-this-song example 
 ![Spotify this example](/images/spotify-this-song.png)
 
+#### movie-this example
 ![Movie this example](/images/movie-this.png)
 
+#### movie-this example 2 (no movie title entered)
 ![Movie this example2](/images/movie-this-blank.png)
 
+#### do-what-it-says example
 ![Do What It Says example](/images/do-what-it-says.png)
 
+#### shows the data that is written to log.txt
 ![Log.txt](/images/logtxt.png)
 
 
-
+https://drive.google.com/open?id=1jcUDswQEnd5y_tpn2z6Vn2KmmZ3F9vyv - Link to example video of going through user process for LIRI Bot app.
+[Video example](https://drive.google.com/open?id=1jcUDswQEnd5y_tpn2z6Vn2KmmZ3F9vyv)
 
 
 
